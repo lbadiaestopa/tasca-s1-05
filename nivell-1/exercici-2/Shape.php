@@ -1,16 +1,13 @@
 <?php
 
-abstract class Shape {
+abstract class Shape implements AreaCalculator
+{
+    protected float $base;
+    protected float $height;
 
-    protected $base;
-    protected $height;
-
-    public function __construct($base, $height) {
+    public function __construct($base, $height) 
+    {
         $this->base = $base;
         $this->height = $height;
     }
-
-    abstract public function area(): float;
 }
-    
-?>
